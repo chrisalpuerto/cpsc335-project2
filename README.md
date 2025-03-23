@@ -11,7 +11,7 @@ The solution updates the grid **in-place** using a **multi-source Breadth-First 
 
 ---
 
-## 💡 Problem Description
+## Problem Description
 
 You're given an `m x n` 2D grid representing a city where each cell can be:
 
@@ -23,7 +23,7 @@ You're given an `m x n` 2D grid representing a city where each cell can be:
 
 ---
 
-## 📥 Input Format
+## Input Format
 
 A 2D grid (list of lists) of size `m x n` with:
 
@@ -33,14 +33,14 @@ A 2D grid (list of lists) of size `m x n` with:
 
 ---
 
-## 📤 Output Format
+## Output Format
 
 - The grid is **updated in-place** with shortest distances from open city areas to the nearest stronghold.
 - Unreachable areas remain `INF`.
 
 ---
 
-## 📌 Constraints
+## Constraints
 
 - `1 ≤ m, n ≤ 250`
 - At least one `0` exists in the grid
@@ -48,7 +48,7 @@ A 2D grid (list of lists) of size `m x n` with:
 
 ---
 
-## 🧠 Algorithm
+## Algorithm
 
 This problem is solved using **multi-source BFS**:
 
