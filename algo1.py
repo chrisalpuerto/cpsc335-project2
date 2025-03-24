@@ -1,5 +1,8 @@
 '''
-Algo 1 by Chris Alpuerto
+Algorithm 1: Walls of Maria
+Author: Chris Alpuerto
+CSUF email: calpuerto@csu.fullerton.edu
+Submission: Project 2
 
 '''
 from collections import deque
@@ -36,6 +39,14 @@ class WallsOfMaria:
                 grid[newX][newY] = grid[x][y] + 1
                 queue.append((newX, newY))
         return grid
+'''
+EFFICIENCY ANALYSIS:
+This algorithm uses a BFS traversal to calculate the distance from the safe stronghold to the open city.
+The time complexity is O(N*M) where N is the number of rows and M is the number of columns in the grid.
+The space complexity is O(N*M) as we use a queue to store the cells to be processed.
+
+'''
+
 def main():
     input_grid1 = [
     ["INF", -1, 0, "INF"],

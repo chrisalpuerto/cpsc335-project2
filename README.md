@@ -58,3 +58,38 @@ This problem is solved using **multi-source BFS**:
 4. Avoid blocked cells (`-1`) and out-of-bound positions.
 
 ---
+
+## Algorithm 2: Vibe Check - Card Shuffle 🃏🔥
+
+### Problem Description
+
+Before starting a card game, the deck needs to be organized into valid groups.  
+You are given a list of integers `hand`, where each element represents a card, and an integer `groupSize`, which defines how many cards should be in each group.
+
+Each group must satisfy the following:
+- The group contains exactly `groupSize` cards.
+- The cards in a group must be consecutive in value (increasing by 1 each time).
+
+Your task is to determine whether the entire deck can be rearranged into valid groups. If it can, return `True`; otherwise, return `False`.
+
+---
+
+### Input Format
+
+- `hand`: A list of integers (1 ≤ len(hand) ≤ 10^5)
+- `groupSize`: An integer (1 ≤ groupSize ≤ len(hand))
+
+---
+
+### Output Format
+
+- Return `True` if the deck can be perfectly grouped as per the rules.
+- Return `False` otherwise.
+
+---
+### How to Run
+
+```bash
+python3 algo1.py
+python3 Algorithm 2 Vibe Check.py
+```
