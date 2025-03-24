@@ -87,6 +87,37 @@ Your task is to determine whether the entire deck can be rearranged into valid g
 - Return `False` otherwise.
 
 ---
+## How to Solve It
+
+To determine whether the hand of cards can be rearranged into valid groups, we use a greedy algorithm combined with a frequency counter.
+
+### Step-by-Step Approach:
+
+1. **Check divisibility**:  
+   If the total number of cards in `hand` is not divisible by `groupSize`, it is impossible to create groups of equal size, so return `False`.
+
+2. **Count occurrences**:  
+   Use `collections.Counter` to count how many times each card appears.
+
+3. **Sort the hand**:  
+   Sort the unique card values in ascending order. This allows us to always try forming groups starting from the smallest available card.
+
+4. **Form groups greedily**:  
+   For each card in the sorted order:
+   - If the card's count is greater than 0, attempt to create a group of size `groupSize` starting from this card.
+   - Check the next `groupSize - 1` consecutive cards to ensure each has at least the same count.
+   - Subtract the count from all cards in the group.
+   - If at any point a required card is missing or doesn’t have enough copies, return `False`.
+
+5. **Return `True`** if all cards are successfully grouped.
+
+### Why This Works:
+
+- Sorting ensures we always process the smallest possible sequences first.
+- The greedy method ensures we never skip lower values that would make it impossible to complete valid groups later.
+- The counter efficiently tracks how many of each card are left as we form groups.
+
+This solution is efficient and can handle large inputs due to the linear nature of the counting and the limited number of passes through the data.
 ### How to Run
 
 ```bash
